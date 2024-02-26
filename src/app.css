@@ -23,6 +23,7 @@
 }
 
 body {
+  margin: 0;
   color: var(--pt-purple-50);
   background-color: var(--pt-bg-purple-darker);
 }
