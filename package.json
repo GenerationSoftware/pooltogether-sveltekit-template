@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "@generationsoftware/hyperstructure-client-js": "^1.9.0",
-    "viem": "^2.7.14"
+    "@wagmi/core": "^2.6.5",
+    "viem": "^2.7.8"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.1",
