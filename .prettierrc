@@ -6,8 +6,6 @@
   "quoteProps": "consistent",
   "arrowParens": "always",
   "trailingComma": "none",
-  "importOrderSortSpecifiers": true,
-  "importOrderCaseInsensitive": true,
-  "plugins": ["prettier-plugin-svelte", "@trivago/prettier-plugin-sort-imports"],
+  "plugins": ["prettier-plugin-svelte"],
   "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
 }

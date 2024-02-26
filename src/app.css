@@ -1,0 +1,32 @@
+:root {
+  --pt-purple-50: #f5f0ff;
+  --pt-purple-100: #deceff;
+  --pt-purple-200: #c8adff;
+  --pt-purple-300: #b18cff;
+  --pt-purple-400: #9b6aff;
+  --pt-purple-500: #8050e3;
+  --pt-purple-600: #6538c1;
+  --pt-purple-700: #4c249f;
+  --pt-purple-800: #36147d;
+  --pt-purple-900: #24095b;
+  --pt-teal-light: #35f0d0;
+  --pt-teal-dark: #0dc5a5;
+  --pt-pink-light: #fa48e8;
+  --pt-pink-dark: #b623a7;
+  --pt-bg-purple-light: #5d3a97;
+  --pt-bg-purple-dark: #2d0c66;
+  --pt-bg-purple-darker: #21064e;
+  --pt-warning-light: #ffb6b6;
+  --pt-warning-dark: #8b0000;
+  --pt-gold: #ffb636;
+  --pt-transparent: #f5f0ff1a;
+}
+
+body {
+  color: var(--pt-purple-50);
+  background-color: var(--pt-bg-purple-darker);
+}
+
+body > div {
+  min-width: 100vw;
+}
