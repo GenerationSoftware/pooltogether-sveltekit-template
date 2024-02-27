@@ -11,8 +11,6 @@
   let formWithdrawAmount = ''
   let errorMsg = ''
 
-  $: userBalance = !!token ? formatTokenAmount(token.amount, token.decimals) : undefined
-
   const getErrorMsg = () => {
     if (!!token && !!formWithdrawAmount) {
       if (Number.isNaN(Number(formWithdrawAmount))) {
@@ -41,8 +39,8 @@
       : 0n
 
   const setMaxWithdrawAmount = () => {
-    if (userBalance !== undefined) {
-      formWithdrawAmount = userBalance
+    if (!!token) {
+      formWithdrawAmount = formatUnits(token.amount, token.decimals)
     }
   }
 
@@ -60,7 +58,7 @@
     <div class="label">
       <span>Withdraw {token.symbol}</span>
       <button class="max-button" on:click={setMaxWithdrawAmount}>
-        Max ({userBalance}
+        Max ({formatTokenAmount(token.amount, token.decimals)}
         {token.symbol})
       </button>
     </div>

@@ -11,8 +11,6 @@
   let formDepositAmount = ''
   let errorMsg = ''
 
-  $: userBalance = !!token ? formatTokenAmount(token.amount, token.decimals) : undefined
-
   const getErrorMsg = () => {
     if (!!token && !!formDepositAmount) {
       if (Number.isNaN(Number(formDepositAmount))) {
@@ -39,8 +37,8 @@
     !!token && !!formDepositAmount && !errorMsg ? parseUnits(formDepositAmount, token.decimals) : 0n
 
   const setMaxDepositAmount = () => {
-    if (userBalance !== undefined) {
-      formDepositAmount = userBalance
+    if (!!token) {
+      formDepositAmount = formatUnits(token.amount, token.decimals)
     }
   }
 
@@ -58,7 +56,7 @@
     <div class="label">
       <span>Deposit {token.symbol}</span>
       <button class="max-button" on:click={setMaxDepositAmount}>
-        Max ({userBalance}
+        Max ({formatTokenAmount(token.amount, token.decimals)}
         {token.symbol})
       </button>
     </div>
