@@ -1,9 +1,11 @@
 <script lang="ts">
   import { Vault, type VaultInfo } from '@generationsoftware/hyperstructure-client-js'
   import { VIEM_CLIENTS } from '$lib/config'
+  import { userAddress } from '$lib/stores'
   import VaultHeader from './Header.svelte'
   import VaultUserBalance from './UserBalance.svelte'
   import VaultBalance from './Balance.svelte'
+  import VaultDepositForm from './DepositForm.svelte'
 
   export let vaultInfo: VaultInfo
 
@@ -23,6 +25,9 @@
   <hr />
   <VaultUserBalance {vault} />
   <VaultBalance {vault} />
+  {#if $userAddress}
+    <VaultDepositForm {vault} userAddress={$userAddress} />
+  {/if}
 </div>
 
 <style>
