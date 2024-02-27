@@ -27,6 +27,7 @@
   <VaultBalance {vault} />
   {#if $userAddress}
     <VaultDepositForm {vault} userAddress={$userAddress} />
+    <!-- TODO: withdraw form -->
   {/if}
 </div>
 

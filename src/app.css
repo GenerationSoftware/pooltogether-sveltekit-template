@@ -78,3 +78,24 @@ body {
 body > div {
   min-width: 100vw;
 }
+
+button {
+  padding: 0;
+  font: inherit;
+  background: none;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+input {
+  font: inherit;
+  border: none;
+  background-color: var(--pt-purple-50);
+  color: var(--pt-purple-900);
+}

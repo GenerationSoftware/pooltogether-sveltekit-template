@@ -63,7 +63,7 @@
       </button>
     </div>
     <form on:submit|preventDefault>
-      <input bind:value={formDepositAmount} />
+      <input bind:value={formDepositAmount} placeholder="0" />
       <VaultDepositButton
         {vault}
         {depositAmount}
@@ -106,8 +106,6 @@
   form > input {
     flex-grow: 1;
     padding: 0.125rem 0.5rem;
-    background-color: var(--pt-purple-50);
-    color: var(--pt-purple-900);
     border-radius: 0.25rem 0 0 0.25rem;
   }
 

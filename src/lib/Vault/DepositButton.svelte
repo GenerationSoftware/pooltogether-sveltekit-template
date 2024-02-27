@@ -74,11 +74,5 @@
     background-color: var(--pt-teal-dark);
     color: var(--pt-purple-900);
     border-radius: 0 0.25rem 0.25rem 0;
-    user-select: none;
-  }
-
-  button:disabled {
-    opacity: 0.5;
-    pointer-events: none;
   }
 </style>
