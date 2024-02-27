@@ -37,6 +37,8 @@
 
   .vault > hr {
     width: 100%;
-    border-color: var(--pt-purple-600);
+    margin: 0;
+    border: none;
+    border-top: solid 1px var(--pt-purple-600);
   }
 </style>

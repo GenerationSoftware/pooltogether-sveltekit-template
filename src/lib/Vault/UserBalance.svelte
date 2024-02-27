@@ -2,7 +2,7 @@
   import type { Vault } from '@generationsoftware/hyperstructure-client-js'
   import Loading from '$lib/Loading.svelte'
   import { userAddress } from '$lib/stores'
-  import { formatTokenAmount } from '$lib/utils'
+  import { formatTokenAmount, getUserVaultTokenBalance } from '$lib/utils'
 
   export let vault: Vault
 </script>
@@ -10,7 +10,7 @@
 {#if $userAddress}
   <div class="vault-user-balance">
     <span class="title">Your Balance:</span>
-    {#await vault.getUserTokenBalance($userAddress)}
+    {#await getUserVaultTokenBalance(vault, $userAddress)}
       <Loading height="0.5rem" />
     {:then token}
       <span>{formatTokenAmount(token.amount, token.decimals)} {token.symbol}</span>
