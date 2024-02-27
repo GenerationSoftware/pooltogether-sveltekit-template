@@ -20,10 +20,8 @@
 <style>
   .vault-header {
     display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    gap: 0.5rem;
     align-items: center;
-    margin: 3rem 0;
   }
 
   .vault-header > img {

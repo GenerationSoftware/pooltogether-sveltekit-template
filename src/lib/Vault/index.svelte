@@ -64,6 +64,7 @@
   }
 
   .vault > hr {
+    width: 100%;
     border-color: var(--pt-purple-600);
   }
 </style>
