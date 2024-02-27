@@ -1,24 +1,19 @@
 <script lang="ts">
-  import type { TokenWithAmount } from '@generationsoftware/hyperstructure-client-js'
+  import type { Vault } from '@generationsoftware/hyperstructure-client-js'
   import Loading from '$lib/Loading.svelte'
-  import { userAddress } from '$lib/stores'
   import { formatTokenAmount } from '$lib/utils'
 
-  export let token: TokenWithAmount | undefined = undefined
-
-  $: balance = !!token ? formatTokenAmount(token.amount, token.decimals) : undefined
+  export let vault: Vault
 </script>
 
-{#if $userAddress}
-  <div class="vault-balance">
-    <span class="title">Total Vault Assets:</span>
-    {#if !!token}
-      <span>{balance} {token.symbol}</span>
-    {:else}
-      <Loading height="0.5rem" />
-    {/if}
-  </div>
-{/if}
+<div class="vault-balance">
+  <span class="title">Total Vault Assets:</span>
+  {#await vault.getTotalTokenBalance()}
+    <Loading height="0.5rem" />
+  {:then token}
+    <span>{formatTokenAmount(token.amount, token.decimals)} {token.symbol}</span>
+  {/await}
+</div>
 
 <style>
   .vault-balance {
