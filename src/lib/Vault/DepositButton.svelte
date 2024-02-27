@@ -61,7 +61,7 @@
 </script>
 
 {#if !$walletClient || !$userAddress || !depositAmount || !token || depositAmount > token.amount || allowance === undefined}
-  <button disabled={true}> Deposit </button>
+  <button disabled={true}>Deposit</button>
 {:else if allowance < depositAmount}
   <button type="submit" on:click={approve} disabled={isApproving || disabled}>Approve</button>
 {:else}

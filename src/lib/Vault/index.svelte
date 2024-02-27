@@ -6,6 +6,7 @@
   import VaultUserBalance from './UserBalance.svelte'
   import VaultBalance from './Balance.svelte'
   import VaultDepositForm from './DepositForm.svelte'
+  import VaultWithdrawForm from './WithdrawForm.svelte'
 
   export let vaultInfo: VaultInfo
 
@@ -27,7 +28,7 @@
   <VaultBalance {vault} />
   {#if $userAddress}
     <VaultDepositForm {vault} userAddress={$userAddress} />
-    <!-- TODO: withdraw form -->
+    <VaultWithdrawForm {vault} userAddress={$userAddress} />
   {/if}
 </div>
 
