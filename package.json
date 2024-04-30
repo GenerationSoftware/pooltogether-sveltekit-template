@@ -1,6 +1,6 @@
 {
   "name": "pooltogether-sveltekit-template",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,7 +11,7 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "dependencies": {
-    "@generationsoftware/hyperstructure-client-js": "^1.9.0",
+    "@generationsoftware/hyperstructure-client-js": "^1.12.2",
     "@wagmi/core": "^2.6.5",
     "viem": "^2.7.8"
   },

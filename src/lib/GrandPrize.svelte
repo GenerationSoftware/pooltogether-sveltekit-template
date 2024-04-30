@@ -59,8 +59,8 @@
   <span class="text">The grand prize is currently at...</span>
   <span class="tokens">
     {#if tokenAmount !== undefined}
-      <img src="poolToken.svg" alt="Prize Token" width={48} height={48} />
-      {tokenAmount.toLocaleString('en', { maximumFractionDigits: 0 })}
+      <img src="ethLogo.svg" alt="Prize Token" width={48} height={48} />
+      {tokenAmount.toLocaleString('en', { maximumFractionDigits: 2 })}
     {:else}
       <Loading height="1rem" />
     {/if}

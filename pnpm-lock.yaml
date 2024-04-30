@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@generationsoftware/hyperstructure-client-js':
-    specifier: ^1.9.0
-    version: 1.9.0(viem@2.7.9)
+    specifier: ^1.12.2
+    version: 1.12.2(viem@2.7.9)
   '@wagmi/core':
     specifier: ^2.6.5
     version: 2.6.5(react@18.2.0)(typescript@5.3.3)(viem@2.7.9)
@@ -342,13 +342,13 @@ packages:
     dev: true
     optional: true
 
-  /@generationsoftware/hyperstructure-client-js@1.9.0(viem@2.7.9):
+  /@generationsoftware/hyperstructure-client-js@1.12.2(viem@2.7.9):
     resolution:
       {
-        integrity: sha512-OnT6KxpBVDv9D7T9iMviXSIJBHOHnm694H2RkbZguk6vqmysqNd3KutZXn9zEfdm3Z5LIpcQwWr7DrSPXQPGMg==
+        integrity: sha512-tp0TAU40uq9VruUNWatISp+mGFxreGNOr1YiEnHz6K23woo4S4QIew0Gnwal/yfyUaQ/hyIOCfHCwaZz/1LV0g==
       }
     peerDependencies:
-      viem: ^2.7.8
+      viem: ^2.7.9
     dependencies:
       axios: 1.6.7
       viem: 2.7.9(typescript@5.3.3)
